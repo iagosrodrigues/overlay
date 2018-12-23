@@ -1,0 +1,22 @@
+# Copyright 1999-2013 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+
+EAPI=5
+
+inherit font
+
+DESCRIPTION="A free-to-download Japanese font that combines the gothic kanji characters with mincho style hiragana and katakana"
+HOMEPAGE="http://font.gloomy.jp/honoka-antique-kaku-dl.html"
+SRC_URI="http://font.gloomy.jp/dl-font-s5a4ik5w/antique-kaku.zip"
+S="${WORKDIR}/${PN}"
+FONT_S="${WORKDIR}/${PN}"
+
+LICENSE="OFL"
+SLOT="0"
+KEYWORDS="~amd64 ~arm"
+IUSE=""
+
+DEPEND=""
+RDEPEND="${DEPEND}"
+
+FONT_SUFFIX="ttf"
