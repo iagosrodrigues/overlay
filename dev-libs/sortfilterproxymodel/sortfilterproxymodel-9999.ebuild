@@ -14,7 +14,7 @@ if [[ ${PV} == "9999" ]]; then
 	SRC_URI=""
 	EGIT_REPO_URI="https://gitlab.com/b0/${PN}.git"
 else
-	SRC_URI="https://gitlab.com/b0/${PN}/-/archive/${PV}/${PN}.tar.gz -> ${P}.tar.gz"	
+	SRC_URI="https://gitlab.com/b0/${PN}/-/archive/${PV}/${PN}.tar.gz -> ${P}.tar.gz"
 	KEYWORDS="~amd64 ~x86"
 fi
 
@@ -29,9 +29,10 @@ DEPEND="${RDEPEND}
 
 src_configure() {
 	eqmake5 \
-		PREFIX=/usr
+		PREFIX=/usr \
+		LIBDIR="$(get_libdir)"
 }
 
 src_install() {
-	emake LIBDIR="$(get_libdir)" install INSTALL_ROOT="${D}"
+	emake install INSTALL_ROOT="${D}"
 }
