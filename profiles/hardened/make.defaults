@@ -1,0 +1,8 @@
+COMMON_FLAGS="-march=native -Os -pipe -fno-plt -fstack-clash-protection -fstrict-overflow -fstack-protector-strong -Wl,-z,relro,-z,now"
+
+FEATURES="multilib-strict userfetch userpriv usersandbox"
+
+USE="minimal X"
+
+# Disable bloat
+USE="$USE -consolekit -systemd -elogind -kmod"

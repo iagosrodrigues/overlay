@@ -1,0 +1,3 @@
+sys-apps/pciutils -kmod
+sys-fs/eudev -kmod
+www-client/firefox clang hardened custom-cflags custom-optimization system-libvpx hwaccel
